@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'yourdockerhubusername/your-app:${BUILD_NUMBER}'
+        DOCKER_IMAGE = 'komalgt/jenkins-docker-imgbuild:${BUILD_NUMBER}'
         DOCKER_HUB_CREDS = credentials('dockerhub-creds')
         GITHUB_TOKEN = credentials('github-token')
-        GITHUB_REPO = 'yourgithubusername/your-app'
+        GITHUB_REPO = 'komalgt/jenkins-docker-imgbuild'
     }
 
     stages {
